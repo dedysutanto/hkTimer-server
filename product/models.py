@@ -23,7 +23,7 @@ class Product(models.Model):
 
 class ProductCounter(models.Model):
     uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
-    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
+    product_id = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
     start_time = models.DateTimeField(null=True, blank=True)
     end_time = models.DateTimeField(null=True, blank=True)
     displayed_item = models.PositiveIntegerField(default=0)
