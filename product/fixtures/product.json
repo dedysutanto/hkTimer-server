@@ -1,0 +1,261 @@
+[{
+    "model": "product.Product",
+    "pk": 1,
+    "fields": {
+      "name": "Tori Popcorn",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/2732b-Tori-Popcorn-(-Reg-).jpg",
+      "duration": 60,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 2,
+    "fields": {
+      "name": "Takoyaki",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/50983-Takoyaki-(-3-pcs-).jpg",
+      "duration": 60,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 3,
+    "fields": {
+      "name": "Chicken Steak",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/7196e-chicken-steak.jpg",
+      "duration": 60,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 4,
+    "fields": {
+      "name": "Drum Stick",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/33517-Sakana.jpg",
+      "duration": 60,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 5,
+    "fields": {
+      "name": "Beef Yakiniku",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/265cb-Beef-Yakiniku.jpg",
+      "duration": 90,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 6,
+    "fields": {
+      "name": "Chicken Teriyaki",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/d3765-Chicken-Teriyaki.jpg",
+      "duration": 90,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 7,
+    "fields": {
+      "name": "Chicken Yakiniku",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/d2e22-Chicken-Yakiniku.jpg",
+      "duration": 90,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 8,
+    "fields": {
+      "name": "Beef Teriyaki",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/069e1-Beef-Teriyaki.jpg",
+      "duration": 90,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 9,
+    "fields": {
+      "name": "Ebi Furai",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/77458-Ebi-Furai.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 10,
+    "fields": {
+      "name": "Ekkado",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/376e7-Ekkado.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 11,
+    "fields": {
+      "name": "Tori no Teba",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/48a99-Tori-no-Teba.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 12,
+    "fields": {
+      "name": "Kani Roll",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/54af2-Kaniroll.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 13,
+    "fields": {
+      "name": "Shrimp Roll",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/7616e-Shrimp-Roll.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 14,
+    "fields": {
+      "name": "Salad",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/e3032-Salad.jpg",
+      "duration": 180,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 15,
+    "fields": {
+      "name": "Chicken Katsu",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/b0416-Chicken-Katsu.jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 16,
+    "fields": {
+      "name": "Tori Ball",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/a1c9d-Spicy-Chicken.jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 17,
+    "fields": {
+      "name": "Shumai Steam",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/26af1-Shumai-Steam-(-3-pcs-).jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 18,
+    "fields": {
+      "name": "Chicken Tofu",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/bdb46-Chicken-Tofu-(-2-pcs-).jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 19,
+    "fields": {
+      "name": "Shrimp Dumpling",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/7377e-Shrimp-Dumpling.jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 20,
+    "fields": {
+      "name": "Chicken Karaage",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/48c81-Crispy-Karaage.jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 21,
+    "fields": {
+      "name": "Egg Chicken Roll",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/434a4-Egg-Chicken-Roll.jpg",
+      "duration": 240,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 22,
+    "fields": {
+      "name": "Shrimp Ball",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/9d9fb-Shrimp-Ball.jpg",
+      "duration": 300,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 23,
+    "fields": {
+      "name": "Es Ogura",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/41119-Es-Ogura.jpg",
+      "duration": 300,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 24,
+    "fields": {
+      "name": "Es Sarang Burung",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/0aa55-Es-Sarang-Burung.jpg",
+      "duration": 360,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 25,
+    "fields": {
+      "name": "Chocolate Pudding",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/3348f-Chocolate-Pudding.jpg",
+      "duration": 360,
+      "limit": 10
+    }
+  },
+  {
+    "model": "product.Product",
+    "pk": 26,
+    "fields": {
+      "name": "Edamame",
+      "img": "https://www.hokben.co.id/assets/uploads/menu/16020-Edamame-(-Large-).jpg",
+      "duration": 720,
+      "limit": 10
+    }
+  }
+]
