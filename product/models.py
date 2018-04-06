@@ -26,8 +26,8 @@ class ProductCounter(models.Model):
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
     start_time = models.DateTimeField(null=True, blank=True)
     end_time = models.DateTimeField(null=True, blank=True)
-    display_item = models.PositiveIntegerField(default=0)
-    waste_item = models.PositiveIntegerField(default=0)
+    displayed_item = models.PositiveIntegerField(default=0)
+    wasted_item = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return '%s' % (self.uuid)
