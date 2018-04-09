@@ -10,10 +10,13 @@ class Product(models.Model):
     isTimerRunning = models.BooleanField(default=False)
     isClicked = models.BooleanField(default=False)
     # uuid = models.UUIDField(null=True)
-    start_time = models.DateTimeField(null=True, blank=True)
-    end_time = models.DateTimeField(null=True, blank=True)
+    # start_time = models.DateTimeField(null=True, blank=True)
+    # end_time = models.DateTimeField(null=True, blank=True)
+    start_time = models.BigIntegerField(default=0)
+    end_time = models.BigIntegerField(default=0)
     displayed_item = models.PositiveIntegerField(default=0)
     wasted_item = models.PositiveIntegerField(default=0)
+    left_time = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return '%s' % (self.name)

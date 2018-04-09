@@ -7,7 +7,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = ('id', 'name', 'img', 'duration', 'limit', 'isWarning',
                   'isTimerRunning', 'isClicked', 'start_time', 'end_time',
-                  'displayed_item', 'wasted_item')
+                  'displayed_item', 'wasted_item', 'left_time')
 
 
 class ProductCounterSerializer(serializers.ModelSerializer):
