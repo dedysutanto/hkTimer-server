@@ -6,7 +6,8 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ('id', 'name', 'img', 'duration', 'limit', 'isWarning',
-                  'isTimerRunning', 'isClicked', 'uuid')
+                  'isTimerRunning', 'isClicked', 'start_time', 'end_time',
+                  'displayed_item', 'wasted_item')
 
 
 class ProductCounterSerializer(serializers.ModelSerializer):

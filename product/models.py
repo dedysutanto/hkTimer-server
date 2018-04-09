@@ -9,11 +9,11 @@ class Product(models.Model):
     isWarning = models.BooleanField(default=False)
     isTimerRunning = models.BooleanField(default=False)
     isClicked = models.BooleanField(default=False)
-    uuid = models.UUIDField(null=True)
+    # uuid = models.UUIDField(null=True)
     start_time = models.DateTimeField(null=True, blank=True)
     end_time = models.DateTimeField(null=True, blank=True)
     displayed_item = models.PositiveIntegerField(default=0)
-    wasted_time = models.PositiveIntegerField(default=0)
+    wasted_item = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return '%s' % (self.name)
