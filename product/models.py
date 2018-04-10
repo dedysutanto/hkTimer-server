@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.shortcuts import reverse
 
 class Product(models.Model):
     name = models.CharField(max_length=50)
@@ -29,13 +30,20 @@ class Product(models.Model):
 
 
 class ProductCounter(models.Model):
-    uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
+    # uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
     product = models.ForeignKey(Product, on_delete=models.DO_NOTHING, default=1)
-    # product_ku = models.PositiveIntegerField(default=0)
     start_time = models.BigIntegerField(default=0)
     end_time = models.BigIntegerField(default=0)
     displayed_item = models.PositiveIntegerField(default=0)
     wasted_item = models.PositiveIntegerField(default=0)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '%s' % (self.uuid)
+        return '%s' % (self.product)
+
+
+class ProductCounterSummary(ProductCounter):
+    class Meta:
+        proxy = True
+        verbose_name = 'ProductCounter Summary'
+        verbose_name_plural = 'ProductCounters Summary'
