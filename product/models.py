@@ -30,9 +30,10 @@ class Product(models.Model):
 
 class ProductCounter(models.Model):
     uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
-    product_id = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
-    start_time = models.DateTimeField(null=True, blank=True)
-    end_time = models.DateTimeField(null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.DO_NOTHING, default=1)
+    # product_ku = models.PositiveIntegerField(default=0)
+    start_time = models.BigIntegerField(default=0)
+    end_time = models.BigIntegerField(default=0)
     displayed_item = models.PositiveIntegerField(default=0)
     wasted_item = models.PositiveIntegerField(default=0)
 
