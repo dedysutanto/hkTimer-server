@@ -1,0 +1,64 @@
+{% extends "admin/change_list.html" %}
+{% load humanize %}
+{% block content_title %}
+<h1> Product Counter Summary </h1>
+{% endblock %} {% block result_list %}
+<div class="results">
+    <table>
+
+        <thead>
+            <tr>
+                <th>
+                    <div class="text">
+                        <a href="#">Product Name</a>
+                    </div>
+                </th>
+                <th>
+                    <div class="text">
+                        <a href="#">Start Time</a>
+                    </div>
+                </th>
+                <th>
+                    <div class="text">
+                        <a href="#">End Time</a>
+                    </div>
+                </th>
+                <th>
+                    <div class="text">
+                        <a href="#">
+                            <strong>Displayed</strong>
+                        </a>
+                    </div>
+                </th>
+                <th>
+                    <div class="text">
+                        <a href="#">
+                            <strong>Wasted</strong>
+                        </a>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in summary %}
+            <tr class="{% cycle 'row1' 'row2' %}">
+                <td> {{ row.product__name }} </td>
+                <td> {{ row.start_datetime|date:"h:m:s" }} </td>
+                <td> {{ row.end_datetime|date:"h:m:s" }} </td>
+                <td> {{ row.displayed_item|intcomma }} </td>
+                <td> {{ row.wasted_item|intcomma }} </td>
+            </tr>
+            {% endfor %}
+            <tr style="font-weight:bold; border-top:2px solid #DDDDDD;">
+                <td></td>
+                <td></td>
+                <td> Total </td>
+                <td> {{ summary_total.displayed_sum|default:0|intcomma }} </td>
+                <td> {{ summary_total.wasted_sum|default:0|intcomma }} </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+{% endblock %} {% block pagination %}{% endblock %}

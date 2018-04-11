@@ -1,0 +1,26 @@
+{% extends 'product/base_site.html' %} {% block content %}
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Timer Running</th>
+            <th>Displayed</th>
+            <th>Wasted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for object in objects %}
+        <tr>
+            <td align="center">{{ object.product__id }}</td>
+            <td>{{ object.product__name }}</td>
+            <td align="center">{{ object.product_count }}</td>
+            <td align="center">{{ object.displayed_sum }}</td>
+            <td align="center">{{ object.wasted_sum }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock content %}
