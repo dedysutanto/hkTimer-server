@@ -8,7 +8,7 @@ from django.utils import timezone
 class Product(models.Model):
     name = models.CharField(max_length=50)
     img = models.CharField(max_length=200)
-    img_file = models.ImageField()
+    # img_file = models.ImageField()
     duration = models.PositiveIntegerField(default=0)
     limit = models.PositiveIntegerField(default=10)
     isWarning = models.BooleanField(default=False)
