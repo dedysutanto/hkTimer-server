@@ -25,12 +25,12 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
             'total_product_displayed': Sum('displayed_item'), 
         }
 
-        response.context_data[‘summary’] = list(
+        response.context_data['summary'] = list(
             qs
             .distinct()
-            .values(‘product’)
+            .values('product')
             .annotate(**metrics)
-            .order_by(‘-total_sales’)
+            .order_by('-total_sales')
         )
         
         '''
