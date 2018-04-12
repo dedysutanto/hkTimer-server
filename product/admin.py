@@ -9,16 +9,21 @@ admin.site.register(Product)
 admin.site.register(ProductCounter)
 
 
+def get_next_in_date_hierarchy(request, date_hierarchy):
+    if date_hierarchy + '__day' in request.GET:
+        return 'hour'
+    if date_hierarchy + '__month' in request.GET:
+        return 'day'
+    if date_hierarchy + '__year' in request.GET:
+        return 'week'
+    return 'month'
+
 @admin.register(ProductCounterSummary)
 class ProductCounterSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/productcounter_summary_change_list.html'
-    # Grappelli specific
-    change_list_template = 'admin/change_list_filter_sidebar.html'
-    # change_list_template = 'product/productcounter_summary_change_list.html'
-    # change_list_template = 'admin/change_list.html'
-    change_list_filter_template = 'admin/filter_listing.html'
-    # End - Grappelli
     date_hierarchy = 'created'
+    # date_hierarchy = get_next_in_date_hierarchy(
+    #        self.date_hierarchy)
     list_display = ('product', 'start_datetime', 'end_datetime','displayed_item', 'wasted_item')
     list_display_links = None
     list_filter = ('product', )
@@ -37,6 +42,9 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
             'wasted_sum': Sum('wasted_item'),
         }
 
+        # date_hierarchy = get_next_in_date_hierarchy(
+        #    request, self.date_hierarchy)
+
         response.context_data['summary'] = list(
             qs.values('product__name', 'start_datetime', 'end_datetime',
                       'displayed_item', 'wasted_item').annotate(**metrics)
@@ -44,6 +52,7 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
 
         response.context_data['summary_total'] = dict(qs.aggregate(**metrics))
 
+        # Bar Chart
         summary_over_time = qs.annotate(
             period=Trunc(
                 'created',

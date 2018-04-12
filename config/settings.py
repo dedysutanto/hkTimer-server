@@ -20,7 +20,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
-    'grappelli',
     'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
