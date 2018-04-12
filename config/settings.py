@@ -20,6 +20,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,3 +119,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # CORS
 CORS_ORIGIN_ALLOW_ALL = True
+
+GRAPPELLI_ADMIN_TITLE = 'Hokben Timer'

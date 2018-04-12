@@ -12,7 +12,15 @@ admin.site.register(ProductCounter)
 @admin.register(ProductCounterSummary)
 class ProductCounterSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/productcounter_summary_change_list.html'
+    # Grappelli specific
+    change_list_template = 'admin/change_list_filter_sidebar.html'
+    # change_list_template = 'product/productcounter_summary_change_list.html'
+    # change_list_template = 'admin/change_list.html'
+    change_list_filter_template = 'admin/filter_listing.html'
+    # End - Grappelli
     date_hierarchy = 'created'
+    list_display = ('product', 'start_datetime', 'end_datetime','displayed_item', 'wasted_item')
+    list_display_links = None
     list_filter = ('product', )
 
     def changelist_view(self, request):
