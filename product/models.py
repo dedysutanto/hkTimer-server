@@ -24,8 +24,11 @@ class Product(models.Model):
     wasted_item = models.PositiveIntegerField(default=0)
     left_time = models.PositiveIntegerField(default=0)
 
+    # For Menu leveling
+    level = models.PositiveIntegerField(default=3)
+
     def __str__(self):
-        return '%s' % (self.name)
+        return '%s %s' % (self.name, self.level)
 
     def get_absolute_url(self):
         """
