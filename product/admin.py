@@ -26,7 +26,7 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
     #        self.date_hierarchy)
     list_display = ('product', 'start_datetime', 'end_datetime','displayed_item', 'wasted_item')
     list_display_links = None
-    list_filter = ('product', )
+    list_filter = ('created', 'product')
 
     def changelist_view(self, request):
         response = super().changelist_view(request)
@@ -52,6 +52,7 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
 
         response.context_data['summary_total'] = dict(qs.aggregate(**metrics))
 
+        '''
         # Bar Chart
         summary_over_time = qs.annotate(
             period=Trunc(
@@ -75,5 +76,6 @@ class ProductCounterSummaryAdmin(admin.ModelAdmin):
                ((x['total'] or 0) - low) / (high - low) * 100 
                if high > low else 0,
         } for x in summary_over_time]
+        '''
 
         return response
