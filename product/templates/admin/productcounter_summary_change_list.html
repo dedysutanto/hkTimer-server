@@ -84,8 +84,8 @@
             {% for row in summary %}
             <tr class="{% cycle 'row1' 'row2' %}">
                 <td> {{ row.product__name }} </td>
-                <td> {{ row.start_datetime|date:"h:m:s" }} </td>
-                <td> {{ row.end_datetime|date:"h:m:s" }} </td>
+                <td> {{ row.start_datetime|date:"d-m-Y h:m:s" }} </td>
+                <td> {{ row.end_datetime|date:"d-m-Y h:m:s" }} </td>
                 <td> {{ row.displayed_item|intcomma }} </td>
                 <td> {{ row.wasted_item|intcomma }} </td>
             </tr>
