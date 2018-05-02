@@ -4,7 +4,7 @@ from django.db.models import Count, Sum, Min, Max
 from django.db.models.functions import Trunc
 from django.db.models import DateTimeField
 # from import_export.admin import ImportExportModelAdmin
-from product.resources import ProductCounterSummaryResource
+# from product.resources import ProductCounterSummaryResource
 
 
 admin.site.register(Product)
