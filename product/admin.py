@@ -3,6 +3,8 @@ from product.models import Product, ProductCounter, ProductCounterSummary
 from django.db.models import Count, Sum, Min, Max
 from django.db.models.functions import Trunc
 from django.db.models import DateTimeField
+from import_export.admin import ImportExportModelAdmin
+from product.resources import ProductCounterSummaryResource
 
 
 admin.site.register(Product)
@@ -19,7 +21,9 @@ def get_next_in_date_hierarchy(request, date_hierarchy):
     return 'month'
 
 @admin.register(ProductCounterSummary)
-class ProductCounterSummaryAdmin(admin.ModelAdmin):
+# class ProductCounterSummaryAdmin(admin.ModelAdmin):
+class ProductCounterSummaryAdmin(ImportExportModelAdmin):
+    resource_class = ProductCounterSummaryResource
     change_list_template = 'admin/productcounter_summary_change_list.html'
     date_hierarchy = 'created'
     # date_hierarchy = get_next_in_date_hierarchy(

@@ -28,7 +28,7 @@ class Product(models.Model):
     level = models.PositiveIntegerField(default=3)
 
     def __str__(self):
-        return '%s %s' % (self.name, self.level)
+        return '%s %s %s' % (self.id, self.name, self.level)
 
     def get_absolute_url(self):
         """
