@@ -3,7 +3,7 @@ from product.models import Product, ProductCounter, ProductCounterSummary
 from django.db.models import Count, Sum, Min, Max
 from django.db.models.functions import Trunc
 from django.db.models import DateTimeField
-from import_export.admin import ImportExportModelAdmin
+# from import_export.admin import ImportExportModelAdmin
 from product.resources import ProductCounterSummaryResource
 
 
