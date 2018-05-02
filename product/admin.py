@@ -21,9 +21,9 @@ def get_next_in_date_hierarchy(request, date_hierarchy):
     return 'month'
 
 @admin.register(ProductCounterSummary)
-# class ProductCounterSummaryAdmin(admin.ModelAdmin):
-class ProductCounterSummaryAdmin(ImportExportModelAdmin):
-    resource_class = ProductCounterSummaryResource
+class ProductCounterSummaryAdmin(admin.ModelAdmin):
+# class ProductCounterSummaryAdmin(ImportExportModelAdmin):
+    # resource_class = ProductCounterSummaryResource
     change_list_template = 'admin/productcounter_summary_change_list.html'
     date_hierarchy = 'created'
     # date_hierarchy = get_next_in_date_hierarchy(
